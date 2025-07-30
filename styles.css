@@ -1,0 +1,290 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    scroll-behavior: smooth;
+    margin: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.main-content {
+    border: 20px solid #1a1a2e;
+    min-height: 100vh;
+}
+
+@media (min-width: 992px) {
+    .main-content {
+        border-width: 40px;
+    }
+}
+
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+.navbar {
+    background-color: #1a1a2e;
+}
+
+.navbar-brand,
+.nav-link {
+    color: #fff !important;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #dcdcdc !important;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+footer {
+    background-color: #1a1a2e;
+    color: #ccc;
+}
+
+.btn-primary {
+    background-color: #1a1a2e;
+    border-color: #1a1a2e;
+}
+
+.btn-primary:hover {
+    background-color: #0d0d1a;
+}
+
+
+.see-more-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    color: #ffffff;
+    background-color: #1a1a2e;
+    border: 2px solid #1a1a2e;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.see-more-btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    background: #16213e;
+    opacity: 0.2;
+    z-index: 0;
+    transition: height 0.3s ease;
+}
+
+.see-more-btn:hover::after {
+    height: 100%;
+}
+
+.see-more-btn:hover {
+    color: #fff;
+}
+
+.see-more-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.card-img-top {
+    height: 200px;
+    /* or 180px, adjust as needed */
+    object-fit: cover;
+}
+
+
+
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: #1a1a2e;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.timeline-item {
+    position: relative;
+    width: 100%;
+    margin-bottom: 3rem;
+    z-index: 2;
+}
+
+.timeline-item.left,
+.timeline-item.right {
+    width: 50%;
+}
+
+.timeline-item.left {
+    padding-right: 60px;
+    text-align: right;
+}
+
+.timeline-item.right {
+    padding-left: 60px;
+    text-align: left;
+    margin-left: 50%;
+}
+
+/* Circle dots */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 0.75rem;
+    width: 20px;
+    height: 20px;
+    background-color: #1a1a2e;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+/* Connector line from dot to content */
+.timeline-item.left::before {
+    right: -10px;
+}
+
+.timeline-item.right::before {
+    left: -10px;
+}
+
+.timeline-content {
+    display: inline-block;
+    max-width: 100%;
+    position: relative;
+}
+
+/* Horizontal connector lines */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    top: 1.25rem;
+    /* aligns with dot */
+    width: 40px;
+    height: 3px;
+    background-color: #1a1a2e;
+    z-index: 2;
+}
+
+.timeline-item.left::after {
+    right: 0;
+    margin-right: 10px;
+}
+
+.timeline-item.right::after {
+    left: 0;
+    margin-left: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .timeline-line {
+        left: 20px;
+        /* Keep line on the left */
+        transform: none;
+        /* Cancel centering */
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        width: 100%;
+        text-align: left;
+        padding-left: 3rem;
+        /* room for line + dot */
+        padding-right: 0;
+        margin-left: 0;
+    }
+
+    .timeline-item.left::before,
+    .timeline-item.right::before {
+        left: 12px;
+        right: auto;
+        /* Clear conflicting desktop rule */
+        top: 1rem;
+        transform: none;
+        background-color: #1a1a2e;
+        /* your test color */
+    }
+
+
+
+    .timeline-item::after {
+        display: none;
+        /* no horizontal connector lines on mobile */
+    }
+}
+
+
+.timeline-arrow {
+    width: 30px;
+    text-align: center;
+    font-size: 1.25rem;
+    position: relative;
+    z-index: 3;
+    color: #1a1a2e;
+}
+
+
+.more-text {
+    display: none;
+}
+
+.more-text.show {
+    display: inline;
+}
+
+
+
+
+@keyframes centre {
+    50% {
+        transform: scale(5);
+    }
+
+    99% {
+        transform: scale(1);
+        display: inline;
+    }
+
+    100% {
+        display: none;
+    }
+}
+
+.centre-card {
+    animation-name: centre;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
