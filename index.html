@@ -15,156 +15,177 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap"
         rel="stylesheet">
 
-    <!-- Add this in your <head> tag -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 
 </head>
 
-<body>
+<body class="preload">
     <!-- Navbar -->
-    <nav class=" navbar navbar-expand-lg fixed-top shadow-sm ">
-        <div class=" container">
-            <a class="navbar-brand" href="./index.html#">George Angel</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon navbar-dark"></span>
-            </button>
-            <div id="navbarNav" class="collapse navbar-collapse">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./projects.html"">Projects</a></li>
-                    <li class=" nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
-                </ul>
-            </div>
+    <div id="navbar"></div>
+
+    <!-- linear-gradient(135deg, #1f1f2f, #2c2c3c) -->
+
+    <div class="border-container">
+        <div class="main-content fade-in">
+            <section id="hero" class="d-flex align-items-center justify-content-center text-center py-5"
+                style="min-height: 95vh; background-color: #1a1a2e; color: white;">
+                <div class="container">
+                    <h1 class="display-4 fw-bold">Hi, I'm George</h1>
+                    <span id="typed-text" class="lead"></span>
+                    <div class="scroll-down-outer mt-5 ">
+                        <a href="#about"><i class="scroll-down-anim bi bi-chevron-down fs-2 text-white"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="" style="">
+                <div class="c1">
+                    <div class="container-lg">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                                <img src="./Images/selfie.jpg" alt="Professional photo of George"
+                                    class="img-fluid rounded-circle shadow" style="max-width: 220px;" />
+                            </div>
+                            <div class="col-lg-8 text-lg-start text-center">
+                                <h2 class="pb-3">Who am I?</h2>
+                                <p>
+                                    I'm George, a mathematician with a strong interest in data and analytics. I love
+                                    uncovering patterns,
+                                    building solutions with real-world value, and making sense of complex information. I
+                                    believe in
+                                    clear communication, thoughtful design, and always staying curious.
+                                </p>
+                                <p>
+                                    Whether it's through code, maths, or creative thinking, I enjoy working on problems
+                                    that
+                                    matter — and
+                                    collaborating with others to make things better.
+                                </p>
+                                <p class="mb-0">
+                                    If you're interested, keep reading to find out what I want to do with my career.
+                                </p>
+                            </div>
+                            <div class="mt-4 text-center text-lg-start d-flex justify-content-center">
+                                <a href="./projects.html" class="see-more-btn px-4 py-2 shadow-sm">
+                                    Explore My Projects
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="whatDoIWantToDo" class="bg-light">
+                <div class="c1">
+                    <div class="container-lg">
+                        <div class="row justify-content-center text-center align-items-center">
+                            <div class="hidingTransition col-md-10 text-lg-start">
+                                <h2 class="py-5">What do I want to do?</h2>
+                                <br>
+                                <p>My goal is to commit to a career that I enjoy, and am enthusiastic about, as this is
+                                    where I am most productive! I am most passionate about maths, and programming,
+                                    and as such want to go into data analytics, or some related job, in a field yet to
+                                    be
+                                    decided.
+                                    <br><br>
+                                    I am open to prospects in any industry, whether it is in the technology, finance or
+                                    other industries.
+                                    I am looking to work mainly in the UK, however, I would also be open to work abroad
+                                    as I
+                                    do love to travel.
+                                    <br><br>
+                                    If you like what you see, feel free to <a href="./contact.html">reach
+                                        out to me</a>.
+                                    <br><br>
+                                    Alternatively, please have a look at some of my recent projects!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="./projects.html" class=" see-more-btn">See my projects!</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="journey" class="py-5">
+
+
+                <div class="container">
+                    <h2 class="text-center mb-5">My Academics</h2>
+
+
+
+
+                    <div class="timeline position-relative">
+
+                        <!-- Event 1 -->
+                        <div class="timeline-item left">
+                            <div class="timeline-content card shadow-sm border-0">
+                                <div class="card-body">
+                                    <h5 class="card-title">MMath Mathematics Degree</h5>
+                                    <p class="card-text">Completing Integrated Masters Maths course at Warwick, expected
+                                        to
+                                        graduate summer 2027. Currently attained 81% in my 1st and 2nd year combined.
+                                    </p>
+                                    <small class="text-muted">2023 - present</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event 2 -->
+                        <div class="timeline-item right">
+                            <div class="timeline-content card shadow-sm border-0">
+                                <div class="card-body">
+                                    <h5 class="card-title">A Levels</h5>
+                                    <p class="card-text">I achieved 4 A*s in: Maths, Further Maths, Physics and Computer
+                                        Science. This was completed at <a
+                                            href="https://sandringham.herts.sch.uk/">Sandringham School</a></p>
+                                    <small class="text-muted">2023</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event 3 -->
+                        <div class="timeline-item left">
+                            <div class="timeline-content card shadow-sm border-0">
+                                <div class="card-body">
+                                    <h5 class="card-title">GCSEs</h5>
+                                    <p class="card-text">I completed my GCSEs at <a
+                                            href="https://sandringham.herts.sch.uk/">Sandringham School</a>, achieving
+                                        an
+                                        APS of 8.9.</p>
+                                    <small class="text-muted">2021</small>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Timeline line -->
+                        <div class="timeline-line"></div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+            <!-- Contact -->
+            <section id="contact" class=" bg-light">
+                <div class="container text-center ">
+                    <h2 class="mb-4">Get in Touch</h2>
+                    <p>If you'd like to collaborate or just say hello, feel free to reach out.</p>
+                    <a href="./contact.html" class="see-more-btn  mt-3">Contact Me</a>
+                </div>
+            </section>
         </div>
-    </nav>
-
-    <div class="main-content">
-        <!-- About -->
-        <section id="about">
-            <div class="container">
-                <h2 class="text-center mb-5">About Me</h2>
-                <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center gap-4">
-                    <div class="flex-shrink-0">
-                        <img src="./Images/selfie.jpg" alt="Professional photo of George"
-                            class="img-fluid rounded-circle shadow" style="max-width: 250px;" />
-                    </div>
-
-                    <div class="text-center text-lg-start" style="max-width: 600px;">
-                        <p class="lead">
-                            I'm George, a mathematician with a strong interest in data and analytics. I build elegant
-                            solutions with real-world impact and enjoy communicating complex ideas clearly.
-                        </p>
-                    </div>
-                </div>
-                <div class="text-center mt-4">
-                    <a href="./index.html#whatDoIWantToDo" class=" see-more-btn">See More</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="whatDoIWantToDo" class="bg-light">
-            <div class="c1">
-                <div class="container-lg">
-                    <div class="row justify-content-center text-center align-items-center">
-                        <div class="hidingTransition col-md-10 text-lg-start">
-                            <h2 class="py-5">What do I want to do?</h2>
-                            <br>
-                            <p>My goal is to commit to a career that I enjoy, and am enthusiastic about, as this is
-                                where I am most productive! I am most passionate about maths, and programming,
-                                and as such want to go into data analytics, or some related job, in a field yet to be
-                                decided.
-                                <br><br>
-                                I am open to prospects in any industry, whether it is in the technology, finance or
-                                other industries.
-                                I am looking to work mainly in the UK, however, I would also be open to work abroad as I
-                                do love to travel.
-                                <br><br>
-                                If you like what you see, feel free to <a href="./contact.html">reach
-                                    out to me</a>.
-                                <br><br>
-                                Alternatively, please have a look at some of my recent projects!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-4">
-                    <a href="./projects.html" class=" see-more-btn">See my projects!</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="journey" class="py-5">
-
-
-            <div class="container">
-                <h2 class="text-center mb-5">My Academics</h2>
-
-
-
-
-                <div class="timeline position-relative">
-
-                    <!-- Event 1 -->
-                    <div class="timeline-item left">
-                        <div class="timeline-content card shadow-sm border-0">
-                            <div class="card-body">
-                                <h5 class="card-title">MMath Mathematics Degree</h5>
-                                <p class="card-text">Completing Integrated Masters Maths course at Warwick, expected to
-                                    graduate summer 2027. Currently attained 81% in my 1st and 2nd year combined.</p>
-                                <small class="text-muted">2023 - present</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Event 2 -->
-                    <div class="timeline-item right">
-                        <div class="timeline-content card shadow-sm border-0">
-                            <div class="card-body">
-                                <h5 class="card-title">A Levels</h5>
-                                <p class="card-text">I achieved 4 A*s in: Maths, Further Maths, Physics and Computer
-                                    Science. This was completed at <a
-                                        href="https://sandringham.herts.sch.uk/">Sandringham School</a></p>
-                                <small class="text-muted">2023</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Event 3 -->
-                    <div class="timeline-item left">
-                        <div class="timeline-content card shadow-sm border-0">
-                            <div class="card-body">
-                                <h5 class="card-title">GCSEs</h5>
-                                <p class="card-text">I completed my GCSEs at <a
-                                        href="https://sandringham.herts.sch.uk/">Sandringham School</a>, achieving an
-                                    APS of 8.9.</p>
-                                <small class="text-muted">2021</small>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <!-- Timeline line -->
-                    <div class="timeline-line"></div>
-                </div>
-            </div>
-        </section>
-
-
-
-
-
-
-        <!-- Contact -->
-        <section id="contact" class=" bg-light">
-            <div class="container text-center ">
-                <h2 class="mb-4">Get in Touch</h2>
-                <p>If you'd like to collaborate or just say hello, feel free to reach out.</p>
-                <a href="./contact.html" class="see-more-btn  mt-3">Contact Me</a>
-            </div>
-        </section>
     </div>
 
     <!-- Footer -->
@@ -176,6 +197,11 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="global.js">
+    </script>
+
+
 </body>
 
 </html>
