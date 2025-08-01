@@ -64,7 +64,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const content = document.querySelector('.main-content');
   const body = document.body;
 
-  fetch('/navbar.html')
+  fetch('https://gangel27.github.io/website/navbar.html')
     .then(res => res.text())
     .then(html => {
       document.getElementById('navbar').innerHTML = html;
