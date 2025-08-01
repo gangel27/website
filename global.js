@@ -64,10 +64,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const content = document.querySelector('.main-content');
   const body = document.body;
 
-  fetch('https://gangel27.github.io/website/navbar.html')
-    .then(res => res.text())
-    .then(html => {
-      // document.getElementById('navbar').innerHTML = html;
+
 
       // Wait a tiny bit to let DOM update, then show content
       requestAnimationFrame(() => {
@@ -119,5 +116,5 @@ window.addEventListener('DOMContentLoaded', () => {
             });
         }
       });
-    });
+   
 });
