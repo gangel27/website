@@ -25,21 +25,7 @@
 
 <body class="preload">
     <!-- Navbar -->
-    <nav class=" navbar navbar-expand-lg fixed-top shadow-sm ">
-        <div class=" container">
-            <a class="navbar-brand" href="./index.html#">George Angel</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon navbar-dark"></span>
-            </button>
-            <div id="navbarNav" class="collapse navbar-collapse">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="./index.html#hero">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./projects.html"">Projects</a></li>
-                    <li class=" nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div id="navbar"></div>
 
     <!-- linear-gradient(135deg, #1f1f2f, #2c2c3c) -->
 
@@ -54,30 +40,30 @@
                         <a href="#about"><i class="scroll-down-anim bi bi-chevron-down fs-2 text-white"></i></a>
                     </div>
                 </div>
+                <a class="scroller" href="#about"
+                    style="z-index:10000; position: absolute; top:75vh; left:40vw; width: 20vw; height: 25vh;">
+
+                </a>
             </section>
 
-            <section id="about" class="" style="">
+            <section id="about" class="">
                 <div class="c1">
                     <div class="container-lg">
                         <div class="row justify-content-center align-items-center">
                             <div class="col-lg-4 text-center mb-4 mb-lg-0">
-                                <img src="./Images/selfie.jpg" alt="Professional photo of George"
+                                <img id='prof-photo' src="./Images/selfie.jpg" alt="Professional photo of George"
                                     class="img-fluid rounded-circle shadow" style="max-width: 220px;" />
                             </div>
                             <div class="col-lg-8 text-lg-start text-center">
                                 <h2 class="pb-3">Who am I?</h2>
                                 <p>
-                                    I'm George, a mathematician with a strong interest in data and analytics. I love
-                                    uncovering patterns,
-                                    building solutions with real-world value, and making sense of complex information. I
-                                    believe in
-                                    clear communication, thoughtful design, and always staying curious.
+                                    I'm George, a mathematician with a strong interest in programming and data. I love
+                                    uncovering patterns, and analysing data to produce actionalable insights, and
+                                    uncover patterns in life that aren't immediately obvious.
                                 </p>
                                 <p>
-                                    Whether it's through code, maths, or creative thinking, I enjoy working on problems
-                                    that
-                                    matter — and
-                                    collaborating with others to make things better.
+                                    Whether it's through code, maths, or creative thinking, I always enjoy working on
+                                    challenging projects, in a team, or by myself.
                                 </p>
                                 <p class="mb-0">
                                     If you're interested, keep reading to find out what I want to do with my career.
@@ -98,7 +84,7 @@
                     <div class="container-lg">
                         <div class="row justify-content-center text-center align-items-center">
                             <div class="hidingTransition col-md-10 text-lg-start">
-                                <h2 class="py-5">What do I want to do?</h2>
+                                <h2 class="pt-5">What do I want to do?</h2>
                                 <br>
                                 <p>My goal is to commit to a career that I enjoy, and am enthusiastic about, as this is
                                     where I am most productive! I am most passionate about maths, and programming,
@@ -112,16 +98,16 @@
                                     as I
                                     do love to travel.
                                     <br><br>
-                                    If you like what you see, feel free to <a href="./contact.html">reach
+                                    If you like what you see, feel free to <a style="color: #1a1a22"
+                                        href="./contact.html">reach
                                         out to me</a>.
                                     <br><br>
-                                    Alternatively, please have a look at some of my recent projects!
+                                    Alternatively, please have a look at some of my <a style="color: #1a1a2e "
+                                        href="./projects.html">recent
+                                        projects</a>.
                                 </p>
                             </div>
                         </div>
-                    </div>
-                    <div class="text-center mt-4">
-                        <a href="./projects.html" class=" see-more-btn">See my projects!</a>
                     </div>
                 </div>
             </section>
@@ -157,7 +143,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">A Levels</h5>
                                     <p class="card-text">I achieved 4 A*s in: Maths, Further Maths, Physics and Computer
-                                        Science. This was completed at <a
+                                        Science. This was completed at <a style="color: #1a1a2e "
                                             href="https://sandringham.herts.sch.uk/">Sandringham School</a></p>
                                     <small class="text-muted">2023</small>
                                 </div>
@@ -169,7 +155,7 @@
                             <div class="timeline-content card shadow-sm border-0">
                                 <div class="card-body">
                                     <h5 class="card-title">GCSEs</h5>
-                                    <p class="card-text">I completed my GCSEs at <a
+                                    <p class="card-text">I completed my GCSEs at <a style="color: #1a1a2e "
                                             href="https://sandringham.herts.sch.uk/">Sandringham School</a>, achieving
                                         an
                                         APS of 8.9.</p>

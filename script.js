@@ -43,6 +43,9 @@ function renderCards() {
         img.className = "card-img-top";
         img.src = project.Thumbnail || "./Images/default.jpg";
         img.alt = "Screenshot of Project";
+        img.style.cssText = `
+        object-fit: scale-down !important; 
+        `
 
         const cardBody = document.createElement("div");
         cardBody.className = "card-body d-flex flex-column";
@@ -50,6 +53,21 @@ function renderCards() {
         const title = document.createElement("h5");
         title.className = "card-title";
         title.innerText = project.Title;
+
+
+        // <div id="specific-project-tags"
+        // class="text-center mb-4 d-flex flex-wrap justify-content-center gap-2">
+        //  </div>
+        const tagContainer = document.createElement('div')
+        tagContainer.id = "thumbnail-project-tags"
+        tagContainer.className = "justify-content-start py-2 mb-4 d-flex flex-wrap gap-2"
+
+        project.Tags?.forEach(tag => {
+                    const span = document.createElement("span");
+                    span.className = "badge bg-secondary";
+                    span.innerText = tag;
+                    tagContainer.appendChild(span);
+                });
 
         const intro = document.createElement("p");
         intro.className = "card-text";
@@ -87,13 +105,30 @@ function renderCards() {
                 const textContent = document.querySelector('.text-content');
                 const carouselInner = document.querySelector('.carousel-inner');
                 const projectTitle = document.getElementById("specific-project-title");
-                const tagContainer = document.getElementById("specific-project-tags");
+                const tagContainerSpec = document.getElementById("specific-project-tags");
 
+                const zoomText = document.createElement('div')
+                zoomText.innerHTML = "Click to zoom"
+                zoomText.style.cssText = `
+                color: grey; 
+                z-index: 100000; 
+                background-color: red; 
+                width: 100%; 
+                height: 100%; 
+                position: absolute;
+                
+                
+                `
+
+                
+
+                console.log(tagContainerSpec)
                 textContent.innerHTML = project.Description;
                 projectTitle.innerText = project.Title;
                 carouselInner.innerHTML = '';
-                tagContainer.innerHTML = "";
+                tagContainerSpec.innerHTML = "";
 
+                carouselInner.appendChild(zoomText)
                 project.Images.forEach((src, index) => {
                     const itemDiv = document.createElement('div');
                     itemDiv.className = 'carousel-item' + (index === 0 ? ' active' : '');
@@ -101,7 +136,7 @@ function renderCards() {
                     const img = document.createElement('img');
                     img.src = src;
                     img.alt = `Image ${index + 1}`;
-                    img.className = 'd-block w-100';
+                    img.className = '';
 
                     itemDiv.appendChild(img);
                     carouselInner.appendChild(itemDiv);
@@ -110,9 +145,9 @@ function renderCards() {
 
                 project.Tags?.forEach(tag => {
                     const span = document.createElement("span");
-                    span.className = "badge bg-secondary";
+                    span.className = "specific-tag badge bg-secondary";
                     span.innerText = tag;
-                    tagContainer.appendChild(span);
+                    tagContainerSpec.appendChild(span);
                 });
 
                 // Show specific project with fade-in
@@ -124,6 +159,7 @@ function renderCards() {
         // Assemble card
         buttonDiv.appendChild(button);
         cardBody.appendChild(title);
+        cardBody.appendChild(tagContainer)
         cardBody.appendChild(intro);
         cardBody.appendChild(buttonDiv);
         card.appendChild(img);
@@ -141,4 +177,80 @@ renderCards();
 
 
 
+
+// Enlarge carousel image into fullscreen modal
+
+// Create modal HTML once and append to body
+document.addEventListener('DOMContentLoaded', () => {
+    const modalOverlay = document.createElement('div');
+    modalOverlay.id = 'image-modal-overlay';
+    modalOverlay.style.cssText = `
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: rgba(0,0,0,0.85);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1050;
+        padding: 2rem;
+    `;
+
+    const modalContent = document.createElement('div');
+    modalContent.id = 'image-modal-content';
+    modalContent.style.cssText = `
+        position: relative;
+        max-width: 80vw;
+        max-height: 80vh;
+        width: 80vw;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: scroll !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        object-fit: scale-down !important;
+    `;
+
+    const modalClose = document.createElement('button');
+    modalClose.innerHTML = '&times;';
+    modalClose.setAttribute('aria-label', 'Close');
+    modalClose.style.cssText = `
+        position: fixed;
+        top: 5vh;
+        right: 5vw;
+        font-size: 2rem;
+        background: none;
+        color: white;
+        border: none;
+        cursor: pointer;
+        z-index: 10;
+    `;
+
+    modalOverlay.addEventListener('click', () => {
+        modalOverlay.style.display = 'none';
+        modalContent.querySelector('img')?.remove();
+    });
+
+    modalOverlay.appendChild(modalContent);
+    modalContent.appendChild(modalClose);
+    document.body.appendChild(modalOverlay);
+
+    // Click handler for carousel images
+    document.getElementById('imageCarousel')?.addEventListener('click', (e) => {
+        if (e.target.tagName === 'IMG') {
+            const img = e.target.cloneNode(true);
+            img.style.cssText = `
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+                border-radius: 12px;
+                box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+                
+            `;
+            modalContent.appendChild(img);
+            modalOverlay.style.display = 'flex';
+        }
+    });
+});
 

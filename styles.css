@@ -13,6 +13,7 @@ body {
 
 }
 
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -460,6 +461,11 @@ footer {
     background-size: 50%, 50%;
 }
 
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    transform: scale(1.03);
+}
+
 
 
 
@@ -511,6 +517,10 @@ footer {
 
 #specific-project {
     padding: 4rem 2rem;
+    padding-top: 0;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     background-color: transparent;
     /* Remove grey! */
     position: relative;
@@ -520,31 +530,56 @@ footer {
 
 
 
-#specific-project-tags {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 2rem;
-}
-
 #specific-project-tags .badge {
-    background-color: #3a3a4e !important;
-    color: #e4e4e4 !important;
-    font-weight: 400 !important;
-    opacity: 0.9;
-    font-size: 0.8rem !important;
-    transition: all 0.3s ease;
+    background-color: transparent !important;
+    border: 1px solid #1a1a2e;
+    /* Slightly lighter than before */
+    color: #1a1a2e !important;
+    /* Softer text color */
+    font-weight: 300 !important;
+    /* Lighter font weight */
+    opacity: 0.85;
+    font-size: 0.75rem !important;
+    transition: all 0.2s ease;
     cursor: default;
     border-radius: 999px;
-    padding: 0.4rem 0.8rem;
+    padding: 0.3rem 0.7rem;
+    box-shadow: none;
 }
 
-#specific-project-tags .badge:hover {
-    background-color: #1a1a2e !important;
-    color: #ffffff !important;
-    transform: scale(1.05);
+.specific-tag:hover {
+    transform: scale(1.05) !important;
+    background-color: red !important;
     opacity: 1;
+}
+
+
+#thumbnail-project-tags .badge {
+    background-color: transparent !important;
+    border: 1px solid #1a1a2e;
+    /* Slightly lighter than before */
+    color: #1a1a2e !important;
+    /* Softer text color */
+    font-weight: 300 !important;
+    /* Lighter font weight */
+    opacity: 0.85;
+    font-size: 0.75rem !important;
+    transition: all 0.2s ease;
+    cursor: default;
+    border-radius: 999px;
+    padding: 0.3rem 0.7rem;
+    box-shadow: none;
+}
+
+#thumbnail-project-tags .badge:hover {
+    transform: scale(1.03);
+    opacity: 1;
+}
+
+.lightbox-overlay.d-none {
+    display: none !important;
+    pointer-events: none;
+    opacity: 0;
 }
 
 .text-content {
@@ -566,30 +601,10 @@ footer {
     margin: 0 auto;
 }
 
-/* Carousel container */
-.carousel-inner {
-    height: 300px;
-    background-color: #1a1a2e;
-    border-radius: 12px;
-    overflow: hidden;
-}
 
-/* Each carousel item is full height and centers its content */
-.carousel-item {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-/* The image is scaled to fit inside the container, never cropped */
-.carousel-item img {
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: contain;
-    display: block;
 
-}
+
 
 
 
@@ -622,6 +637,110 @@ footer {
 }
 
 
+
+
+
+/* HERE */
+
+/* Base carousel styles */
+.carousel-inner {
+    height: 30vh;
+    background-color: transparent;
+    overflow: visible;
+    position: relative;
+}
+
+/* Carousel item fills container and centers content */
+.carousel-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    /* vertical centering */
+    justify-content: center;
+    /* horizontal centering */
+    width: 100%;
+    height: 100%;
+}
+
+/* Image scales proportionally and stays centered */
+.carousel-item img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: scale-down;
+    display: block;
+    margin: auto;
+    border-radius: 12px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: zoom-in;
+    color: transparent;
+}
+
+.carousel-item img:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(1.03);
+    overflow: visible;
+}
+
+
+
+/* Smaller screen adjustments */
+@media (max-width: 768px) {
+    .carousel-inner {
+        height: 25vh;
+    }
+
+    .text-content {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    #return-card-display {
+        font-size: 0.95rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Carousel wrapper: default to compact width */
+.carousel-wrapper {
+    width: 400px;
+    background-color: white !important;
+}
+
+/* Expand wrapper on medium screens */
+@media (max-width: 992px) {
+    .carousel-wrapper {
+        width: 100%;
+    }
+}
+
+/* Larger screens: increase height slightly */
+@media (min-width: 992px) {
+    .carousel-inner {
+        height: 25vh;
+    }
+
+    .carousel-wrapper {
+        width: 40%;
+    }
+}
+
+/* Extra large screens */
+@media (min-width: 1200px) {
+    .carousel-inner {
+        height: 30vh;
+    }
+
+    .carousel-wrapper {
+        width: 50%;
+    }
+}
+
+
+/* END */
 
 
 .back-arrow-btn {
@@ -667,6 +786,7 @@ footer {
     #specific-project-tags {
         order: 3;
         margin-top: 1rem;
+
     }
 }
 
@@ -732,9 +852,15 @@ footer {
     .back-arrow-btn {
         padding: 8px;
         font-size: 1.2rem;
+
     }
 }
 
 #projects {
     padding-top: 2rem;
+}
+
+#prof-photo:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
 }

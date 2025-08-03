@@ -64,7 +64,10 @@ window.addEventListener('DOMContentLoaded', () => {
   const content = document.querySelector('.main-content');
   const body = document.body;
 
-
+  fetch('/navbar.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('navbar').innerHTML = html;
 
       // Wait a tiny bit to let DOM update, then show content
       requestAnimationFrame(() => {
@@ -106,8 +109,8 @@ window.addEventListener('DOMContentLoaded', () => {
             strings: [
                 "Mathematician.",
                 "Problem Solver.",
-                "Data Enthusiast.",
-                "Communicator."
+                "Data Analyst.",
+                "Software Engineer."
             ],
             typeSpeed: 50,
             backSpeed: 30,
@@ -116,5 +119,5 @@ window.addEventListener('DOMContentLoaded', () => {
             });
         }
       });
-   
+    });
 });
