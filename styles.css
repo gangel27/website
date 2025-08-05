@@ -167,6 +167,12 @@ body.preload {
     box-sizing: border-box;
 }
 
+@media (max-width: 400px) {
+    .border-container {
+        border: 10px solid #1a1a2e;
+    }
+}
+
 
 
 .main-content {
@@ -592,6 +598,8 @@ footer {
     background-color: #f9f9f9;
 }
 
+
+
 .project-card {
     background-color: #ffffff;
     border-radius: 16px;
@@ -601,6 +609,12 @@ footer {
     margin: 0 auto;
 }
 
+
+.contact-container {
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    padding: 2rem !important;
+}
 
 
 
@@ -618,16 +632,10 @@ footer {
         font-size: 1rem;
         padding: 0.8rem;
     }
-
-    #return-card-display {
-        font-size: 0.95rem;
-        padding: 0.5rem 1rem;
-    }
 }
 
 .carousel-wrapper {
     width: 400px;
-    background-color: white !important;
 }
 
 @media (max-width: 992px) {
@@ -641,6 +649,7 @@ footer {
 
 
 /* HERE */
+
 
 /* Base carousel styles */
 .carousel-inner {
@@ -679,16 +688,23 @@ footer {
     color: transparent;
 }
 
-.carousel-item img:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    transform: scale(1.03);
-    overflow: visible;
+
+
+/* Carousel wrapper: default to compact width */
+.carousel-wrapper {
+    width: 400px;
+    background-color: #f9f9f9 !important;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 13px;
+    padding: 3rem;
 }
 
 
 
+
 /* Smaller screen adjustments */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .carousel-inner {
         height: 25vh;
     }
@@ -701,19 +717,24 @@ footer {
     #return-card-display {
         font-size: 0.95rem;
         padding: 0.5rem 1rem;
+        /* display: block; */
+    }
+
+    .carousel-wrapper {
+        padding: 1.5rem !important;
     }
 }
 
-/* Carousel wrapper: default to compact width */
-.carousel-wrapper {
-    width: 400px;
-    background-color: white !important;
-}
+
 
 /* Expand wrapper on medium screens */
 @media (max-width: 992px) {
     .carousel-wrapper {
         width: 100%;
+    }
+
+    .carousel-wrapper {
+        padding: 1.5rem;
     }
 }
 
@@ -863,4 +884,62 @@ footer {
 #prof-photo:hover {
     transform: scale(1.03);
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+}
+
+
+.contact-icon i {
+    width: 100px;
+    height: 100px;
+}
+
+.contact-icon:hover {
+    transform: scale(1.05);
+}
+
+/* Wrapper to help with relative positioning inside the card */
+.top-left-btn-wrapper {
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    z-index: 20;
+    /* ensure it's above carousel */
+}
+
+/* Your existing see-more-btn stays intact */
+
+/* Tweak specifically for this button */
+#top-left-back-btn {
+    position: relative;
+    /* required by you */
+    margin: 0;
+    transform: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+}
+
+/* Optional hover effect improvement */
+#top-left-back-btn:hover {
+    background-color: #292948;
+    border-color: #292948;
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+
+/* medium boostrap size  */
+@media (max-width: 768px) {
+    #top-left-back-btn {
+        display: none !important;
+    }
+}
+
+.form-control:focus {
+    border-color: #1a1a2e !important;
+    box-shadow: none !important;
+    outline: none;
 }

@@ -4,7 +4,7 @@
 const fadeDuration = 400; // matches CSS fade time in ms
 
 // document.getElementById('return-card-display').addEventListener('click', () => {
-document.querySelectorAll('#return-card-display').forEach(button => {
+document.querySelectorAll('.back-to-projects').forEach(button => {
   button.addEventListener('click', () => {
     const specific = document.getElementById("specific-project");
     const cards = document.getElementById("card-display");
@@ -26,6 +26,8 @@ document.querySelectorAll('#return-card-display').forEach(button => {
     
     })
 });
+
+
 
 function renderCards() {
     const container = document.getElementById("card-display-container");
@@ -107,41 +109,73 @@ function renderCards() {
                 const projectTitle = document.getElementById("specific-project-title");
                 const tagContainerSpec = document.getElementById("specific-project-tags");
 
-                const zoomText = document.createElement('div')
-                zoomText.innerHTML = "Click to zoom"
-                zoomText.style.cssText = `
-                color: grey; 
-                z-index: 100000; 
-                background-color: red; 
-                width: 100%; 
-                height: 100%; 
-                position: absolute;
-                
-                
-                `
-
                 
 
-                console.log(tagContainerSpec)
+                // Set project info
                 textContent.innerHTML = project.Description;
                 projectTitle.innerText = project.Title;
                 carouselInner.innerHTML = '';
                 tagContainerSpec.innerHTML = "";
 
-                carouselInner.appendChild(zoomText)
+                // Build carousel
                 project.Images.forEach((src, index) => {
                     const itemDiv = document.createElement('div');
                     itemDiv.className = 'carousel-item' + (index === 0 ? ' active' : '');
 
+                    // Container for image + overlay
+                    const imgContainer = document.createElement('div');
+                    imgContainer.style.position = 'relative';
+                    imgContainer.style.width = '100%';
+                    imgContainer.style.height = '100%';
+
                     const img = document.createElement('img');
                     img.src = src;
                     img.alt = `Image ${index + 1}`;
-                    img.className = '';
+                    img.style.maxWidth = '100%';
+                    img.style.maxHeight = '100%';
+                    img.style.display = 'block';
+                    img.style.transition = 'opacity 0.3s ease';
+                    
 
-                    itemDiv.appendChild(img);
+                    const zoomText = document.createElement('div');
+                    zoomText.innerHTML = "Click to zoom";
+                    zoomText.style.cssText = `
+                        color: grey; 
+                        font-weight: bold; 
+
+                        z-index: 100000; 
+                        width: 100%; 
+                        height: 100%; 
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        text-align: center; 
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        opacity: 0; 
+                        transition: opacity 0.3s ease;
+                        pointer-events: none;
+                    `;
+
+                    img.addEventListener("mouseenter", () => {
+                        img.style.opacity = "0.2";
+                        zoomText.style.opacity = "1";
+                    });
+
+                    img.addEventListener("mouseleave", () => {
+                        img.style.opacity = "1";
+                        zoomText.style.opacity = "0";
+                    });
+
+        
+                    imgContainer.appendChild(img);
+                    imgContainer.appendChild(zoomText);
+                    itemDiv.appendChild(imgContainer);
                     carouselInner.appendChild(itemDiv);
-
                 });
+
+
 
                 project.Tags?.forEach(tag => {
                     const span = document.createElement("span");
@@ -157,6 +191,7 @@ function renderCards() {
         });
 
         // Assemble card
+
         buttonDiv.appendChild(button);
         cardBody.appendChild(title);
         cardBody.appendChild(tagContainer)

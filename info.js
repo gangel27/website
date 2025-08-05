@@ -15,7 +15,7 @@ const dataString = `[
     "Title": "Hand drawn number recogniser",
     "Tags": ["Convolutional Neural Network", "Tensorflow", "Python", "Server", "MNIST"],
     "Intro": "A live digit recognition app powered by a TensorFlow-trained neural network.",
-    "Description": "<p>This project was my first dive into neural networks, where I trained a <em>convolutional neural network (CNN)</em> using <em>TensorFlow</em> on the MNIST dataset. The model learned to recognize hand-drawn digits with high accuracy through layered convolution and pooling operations. I built a minimal Flask backend and an HTML5 Canvas frontend that lets users draw digits live, which are then preprocessed and classified in real time by the model. The focus was on end-to-end integration of a neural network into a working web app.</p>"
+    "Description": "<p>This project was my first dive into neural networks, where I trained a <em>convolutional neural network (CNN)</em> using <em>TensorFlow</em> on the MNIST dataset. The model learned to recognize hand-drawn digits with high accuracy through layered convolution and pooling operations. I built a minimal Flask backend and an HTML5 Canvas frontend that lets users draw digits live, which are then preprocessed and classified in real time by the model. The focus of this project was on end-to-end integration of a neural network into a working web app.</p>"
   },
   {
     "ID": "prem-pred",
@@ -56,7 +56,7 @@ const dataString = `[
     "Title": "Personal AI assistant",
     "Tags": ["LLM", "Raspberry Pi", "Hardware", "Python"],
     "Intro": "Voice-controlled Raspberry Pi assistant with LLM integration.",
-    "Description": "<p>This project was built at home using my own Raspberry Pi, connected to a speaker and microphone. Using Python, I developed a script that continuously listened for an activation command and responded accordingly.</p><p>Responses were generated using a large language model (LLM) API, but I also implemented keyword-based overrides to trigger specific actions — such as sending a message to my phone via a Telegram bot. Impressively, this worked even when the Pi and my phone were on different networks.</p>"
+    "Description": "<p>This project was built at home using my own Raspberry Pi, connected to a speaker and microphone. Using Python, I developed a script that continuously listened for an activation command and responded accordingly.</p><p>Responses were generated using a large language model (LLM) API, but I also implemented keyword-based overrides to trigger specific actions — such as sending a message to my phone via a Telegram bot. This worked even when the Pi and my phone were on different networks.</p>"
 
   }
 ]`;
