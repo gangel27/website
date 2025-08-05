@@ -40,10 +40,10 @@ function handlePageLoad() {
   if (document.querySelector('#typed-text') && window.Typed && !typedInstance) {
     typedInstance = new Typed('#typed-text', {
       strings: [
-        "Mathematician.",
-        "Problem Solver.",
-        "Data Analyst.",
-        "Software Engineer."
+        "Mathematician",
+        "Problem Solver",
+        "Data Analyst",
+        "Software Engineer"
       ],
       typeSpeed: 50,
       backSpeed: 30,
