@@ -1,3 +1,5 @@
+let typedInstance = null;
+
 function handlePageLoad() {
   const content = document.querySelector('.main-content');
   const body = document.body;
@@ -18,8 +20,7 @@ function handlePageLoad() {
       !href.startsWith('http') &&
       !href.startsWith('mailto:') &&
       !href.startsWith('tel:') &&
-      !href.startsWith('#'); // &&
-      // !link.hasAttribute('target');
+      !href.startsWith('#');
 
     if (isInternal) {
       link.addEventListener('click', function (e) {
@@ -35,9 +36,9 @@ function handlePageLoad() {
     }
   });
 
-  // Initialize typing animation if present
-  if (document.querySelector('#typed-text') && window.Typed) {
-    new Typed('#typed-text', {
+  // Initialize typing animation if present and not already created
+  if (document.querySelector('#typed-text') && window.Typed && !typedInstance) {
+    typedInstance = new Typed('#typed-text', {
       strings: [
         "Mathematician.",
         "Problem Solver.",
@@ -50,7 +51,7 @@ function handlePageLoad() {
       loop: true
     });
   }
-};
+}
 
 window.addEventListener('DOMContentLoaded', handlePageLoad);
 window.addEventListener('pageshow', handlePageLoad);
