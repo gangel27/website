@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', () => {
+function handlePageLoad() {
   const content = document.querySelector('.main-content');
   const body = document.body;
 
@@ -49,5 +49,14 @@ window.addEventListener('DOMContentLoaded', () => {
       backDelay: 1000,
       loop: true
     });
+  }
+};
+
+window.addEventListener('DOMContentLoaded', handlePageLoad);
+window.addEventListener('pageshow', handlePageLoad);
+window.addEventListener('pagehide', () => {
+  const content = document.querySelector('.main-content');
+  if (content) {
+    content.classList.remove('fade-out');
   }
 });
