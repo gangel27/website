@@ -1,5 +1,53 @@
-# website
+# George Angel | Personal Website 🌐
 
-Hi there! My name is George Angel, and welcome to my personal website. If you'd like to know more about me, or how to get in touch with me, I'd suggest you check it out. If you have any feedback or suggested updates to the site, please let me know!
+Welcome to the source code for my personal website, hosted via [GitHub Pages](https://gangel27.github.io/website/).
 
-This site was built using Boostrap to aid styling, and the rest was raw HTML/ CSS / JS. 
+## 🔗 Live Site
+👉 [https://gangel27.github.io/website/](https://gangel27.github.io/website/)
+
+## 👋 About Me
+I'm **George Angel**, a mathematics student at the University of Warwick with a passion for data, analytics, and software development. This website showcases my:
+
+- 🧠 Academic background  
+- 💻 Projects and personal work  
+- 📬 Contact details  
+
+Whether you're a recruiter, collaborator, or just curious — feel free to explore!
+
+## 🚀 Tech Stack
+
+- HTML5 / CSS3 / JavaScript
+- [Bootstrap 5](https://getbootstrap.com/)
+- Hosted with [GitHub Pages](https://pages.github.com/)
+
+## 📁 Structure
+
+```bash
+/
+├── index.html         # Homepage
+├── projects.html      # Project portfolio
+├── contact.html       # Contact form
+├── Styling/           # Custom CSS
+├── Scripts/           # JavaScript functionality
+├── Images/            # Icons, profile, etc.
+└── sitemap.xml        # For SEO indexing
+```
+
+## SEO and Optimization
+This website includes:
+
+Meta tags for description, keywords, and author
+
+Open Graph and Twitter card metadata
+
+Mobile responsiveness and accessibility
+
+Google Search Console verification
+
+Submitted sitemap and robots.txt
+
+📬 Contact
+You can contact me via the form on the Contact page, or connect with me on LinkedIn.
+
+
+Thanks for visiting!
