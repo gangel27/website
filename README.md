@@ -3,7 +3,7 @@
 Welcome to the source code for my personal website, hosted via [GitHub Pages](https://gangel27.github.io/website/).
 
 ## 🔗 Live Site
-👉 [https://gangel27.github.io/website/](https://gangel27.github.io/website/)
+👉 [georgeangel.org](https://georgeangel.org)
 
 ## 👋 About Me
 I'm **George Angel**, a mathematics student at the University of Warwick with a passion for data, analytics, and software development. This website showcases my:
