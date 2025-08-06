@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://gangel27.github.io/website/sitemap.xml
+Sitemap: https://georgeangel.org/sitemap.xml
