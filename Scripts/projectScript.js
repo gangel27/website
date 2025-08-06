@@ -1,4 +1,4 @@
-// // IDS = {'chess-ai', 'digit-recog', 'prem-pred', 'weather-stat', 'epidemiology', 'ai-assist'}
+// IDS = {'chess-ai', 'digit-recog', 'prem-pred', 'weather-stat', 'epidemiology', 'ai-assist'}
 
 
 const fadeDuration = 400; // matches CSS fade time in ms
@@ -31,7 +31,7 @@ document.querySelectorAll('.back-to-projects').forEach(button => {
 
 function renderCards() {
     const container = document.getElementById("card-display-container");
-    container.innerHTML = ""; // Clear existing cards
+    container.innerHTML = ""; 
 
     dataArray.forEach(project => {
         const col = document.createElement("div");
@@ -56,10 +56,6 @@ function renderCards() {
         title.className = "card-title";
         title.innerText = project.Title;
 
-
-        // <div id="specific-project-tags"
-        // class="text-center mb-4 d-flex flex-wrap justify-content-center gap-2">
-        //  </div>
         const tagContainer = document.createElement('div')
         tagContainer.id = "thumbnail-project-tags"
         tagContainer.className = "justify-content-start py-2 mb-4 d-flex flex-wrap gap-2"
@@ -83,7 +79,6 @@ function renderCards() {
         button.type = "button";
         button.innerText = "Read more";
 
-        // When card is clicked
         card.addEventListener("click", () => {
             window.scrollTo({
                 top: 0,
@@ -205,15 +200,6 @@ function renderCards() {
 }
 
 renderCards();
-
-
-
- // Clear previous tags
-
-
-
-
-// Enlarge carousel image into fullscreen modal
 
 // Create modal HTML once and append to body
 document.addEventListener('DOMContentLoaded', () => {

@@ -1,3 +1,5 @@
+// This file is a replacement for a json file - with the conversion to a dictionary at the bottom 
+// There is no front-end functionality here - see the Scripts folder for that! 
 const dataString = `[
   {
     "ID": "chess-ai",
@@ -52,7 +54,7 @@ const dataString = `[
   {
     "ID": "ai-assist",
     "Thumbnail": "./Images/ai_assist.png",
-    "Images": ["./Images/selfie.jpg", "./Images/epidemiology.png", "./Images/chess_thumbnail.jpg"],
+    "Images": ["./Images/ai_assist.png"],
     "Title": "Personal AI assistant",
     "Tags": ["LLM", "Raspberry Pi", "Hardware", "Python"],
     "Intro": "Voice-controlled Raspberry Pi assistant with LLM integration.",
