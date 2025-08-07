@@ -5,13 +5,11 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://georgeangel.org/index.html</loc>
-  </url>
-  <url>
     <loc>https://georgeangel.org/projects.html</loc>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://georgeangel.org/contact.html</loc>
+    <priority>0.6</priority>
   </url>
-
 </urlset>
