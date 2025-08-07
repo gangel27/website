@@ -1,9 +1,9 @@
 # George Angel | Personal Website 🌐
 
-Welcome to the source code for my personal website, hosted via [GitHub Pages](https://gangel27.github.io/website/).
+Welcome to the source code for my personal website, hosted via [georgeangel.org](https://georgeangel.org/).
 
 ## 🔗 Live Site
-👉 [georgeangel.org](https://georgeangel.org)
+👉 [georgeangel.org](https://georgeangel.org/)
 
 ## 👋 About Me
 I'm **George Angel**, a mathematics student at the University of Warwick with a passion for data, analytics, and software development. This website showcases my:
