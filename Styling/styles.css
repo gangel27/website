@@ -943,3 +943,121 @@ footer {
     box-shadow: none !important;
     outline: none;
 }
+
+
+/* ===== Bubble Mind Map ===== */
+.bubblemap-section {
+    scroll-margin-top: 80px;
+}
+
+.bubblemap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    min-height: 360px;
+    background: radial-gradient(120% 120% at 10% 10%, #eef2ff, #f8fafc 45%, #ffffff);
+    border-radius: 1.25rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
+    overflow: hidden;
+}
+
+.bubblemap-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.bubblemap-details {
+    position: absolute;
+    inset: auto 1rem 1rem 1rem;
+    background: rgba(255, 255, 255, .85);
+    backdrop-filter: blur(6px);
+    border-radius: 1rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
+    transition: transform .25s ease, opacity .25s ease;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.bubblemap-details-inner {
+    padding: .9rem 1rem;
+}
+
+.bubblemap-title {
+    font-size: 1.1rem;
+    margin: 0 0 .25rem 0;
+}
+
+.bubblemap-desc {
+    margin: 0;
+    color: #334155;
+}
+
+.bubblemap-fallback {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+/* Bubble styles via SVG classes */
+.bubble {
+    cursor: grab;
+    transition: filter .2s ease;
+}
+
+.bubble:active {
+    cursor: grabbing;
+}
+
+.bubble .bubble-ring {
+    fill: url(#bubbleGrad);
+    opacity: .85;
+}
+
+.bubble .bubble-core {
+    fill: white;
+}
+
+.bubble .bubble-label {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    fill: #0f172a;
+    pointer-events: none;
+    user-select: none;
+}
+
+.bubble.is-active {
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, .15));
+}
+
+.link {
+    stroke: rgba(15, 23, 42, .15);
+    stroke-width: 2;
+}
+
+@media (max-width: 768px) {
+    .bubblemap {
+        min-height: 320px;
+        aspect-ratio: 4 / 3;
+    }
+
+    .bubblemap-details {
+        inset: auto .75rem .75rem .75rem;
+    }
+}
+
+/* Reduced motion: stop physics and show a tidy layout */
+@media (prefers-reduced-motion: reduce) {
+    .bubblemap {
+        background: #ffffff;
+    }
+
+    .bubblemap-canvas {
+        display: none;
+    }
+
+    .bubblemap-details {
+        position: static;
+        margin-top: 1rem;
+    }
+}

@@ -31,6 +31,7 @@ function handlePageLoad() {
         }
         setTimeout(() => {
           window.location.href = href;
+          bubbles()
         }, 400);
       });
     }
