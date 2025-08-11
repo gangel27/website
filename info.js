@@ -55,7 +55,7 @@ const dataString = `[
     "Thumbnail": "./Images/Crowned/1.png",
     "Images": ["./Images/Crowned/1.png", "./Images/Crowned/2.png","./Images/Crowned/3.png"],
     "Title": "Full Stack e-commerce website",
-    "Tags": ["Full Stack Development", "E-commerce", "Boostrap", "Flask"],
+    "Tags": ["Full Stack Development", "E-commerce", "Secure Payments"],
     "Intro": "Full stack web application for a start-up e-commerce clothing brand.",
     "Description": "<p>I built a full-stack e-commerce web app for a friend’s startup, delivering the complete flow from product browsing to checkout with a responsive, accessible UI. The startup didn’t fully launch, so a few stock photos remain as placeholders that don’t reflect the final brand — however the functionality, data models, and user experience are complete and accurate.</p> <br> <br> <p>The platform integrates PayPal for payments with server-side validation, secure session management, CSRF protection, and input sanitisation. I also implemented SEO foundations — descriptive metadata, a sitemap, and performance tuning — to ensure fast load times and strong search visibility.</p>"
   },
