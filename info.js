@@ -30,16 +30,6 @@ const dataString = `[
 
   },
   {
-    "ID": "weather-stat",
-    "Thumbnail": "./Images/weather_station.png",
-    "Images": ["./Images/Weather/1.png", "./Images/Weather/2.png", "./Images/Weather/3.png", "./Images/Weather/4.png"],
-    "Title": "Live Weather Station",
-    "Tags": ["Server", "Raspberry Pi", "Full-stack Development"],
-    "Intro": "A live updating website conncted to a raspberry pi recording, and storing local weather conditions.",
-    "Description": "<p>This project was built and run almost entirely on a Raspberry Pi 4. My old school, <a style='color: #1a1a2e' href='https://sandringham.herts.sch.uk/' target='_blank'>Sandringham</a>, had some unused sensors lying around — including temperature, wind, rain, humidity, and pressure sensors — which I connected to the Pi to begin recording environmental data.</p><p>The data was stored in a SQL database on the backend, accessible via a Python Flask server. This server powered a website I built, which displayed the current weather and included an interactive interface for viewing historical sensor data.</p>"
-
-  },
-  {
     "ID": "epidemiology",
     "Thumbnail": "./Images/epidemiology.png",
     "Images": ["./Images/epidemiology/1.png", "./Images/epidemiology/2.png", "./Images/epidemiology/3.png", "./Images/epidemiology/4.png"],
@@ -59,8 +49,27 @@ const dataString = `[
     "Tags": ["LLM", "Raspberry Pi", "Hardware", "Python"],
     "Intro": "Voice-controlled Raspberry Pi assistant with LLM integration.",
     "Description": "<p>This project was built at home using my own Raspberry Pi, connected to a speaker and microphone. Using Python, I developed a script that continuously listened for an activation command and responded accordingly.</p><p>Responses were generated using a large language model (LLM) API, but I also implemented keyword-based overrides to trigger specific actions — such as sending a message to my phone via a Telegram bot. This worked even when the Pi and my phone were on different networks.</p>"
+  },
+  {
+    "ID": "Crowned",
+    "Thumbnail": "./Images/Crowned/1.png",
+    "Images": ["./Images/Crowned/1.png", "./Images/Crowned/2.png","./Images/Crowned/3.png"],
+    "Title": "Full Stack e-commerce website",
+    "Tags": ["Full Stack Development", "E-commerce", "Boostrap", "Flask"],
+    "Intro": "Full stack web application for a start-up e-commerce clothing brand.",
+    "Description": "<p>I built a full-stack e-commerce web app for a friend’s startup, delivering the complete flow from product browsing to checkout with a responsive, accessible UI. The startup didn’t fully launch, so a few stock photos remain as placeholders that don’t reflect the final brand — however the functionality, data models, and user experience are complete and accurate.</p> <br> <br> <p>The platform integrates PayPal for payments with server-side validation, secure session management, CSRF protection, and input sanitisation. I also implemented SEO foundations — descriptive metadata, a sitemap, and performance tuning — to ensure fast load times and strong search visibility.</p>"
+  },
+  {
+    "ID": "weather-stat",
+    "Thumbnail": "./Images/weather_station.png",
+    "Images": ["./Images/Weather/1.png", "./Images/Weather/2.png", "./Images/Weather/3.png", "./Images/Weather/4.png"],
+    "Title": "Live Weather Station",
+    "Tags": ["Server", "Raspberry Pi", "Full-stack Development"],
+    "Intro": "A live updating website conncted to a raspberry pi recording, and storing local weather conditions.",
+    "Description": "<p>This project was built and run almost entirely on a Raspberry Pi 4. My old school, <a style='color: #1a1a2e' href='https://sandringham.herts.sch.uk/' target='_blank'>Sandringham</a>, had some unused sensors lying around — including temperature, wind, rain, humidity, and pressure sensors — which I connected to the Pi to begin recording environmental data.</p><p>The data was stored in a SQL database on the backend, accessible via a Python Flask server. This server powered a website I built, which displayed the current weather and included an interactive interface for viewing historical sensor data.</p>"
 
   }
+
 ]`;
 
 const dataArray = JSON.parse(dataString);
